@@ -15,7 +15,7 @@ typedef string Timestamp
 /** Сумма в минимальных денежных единицах. */
 typedef i64 Amount
 
-/** Идентификатор счета */
+/** Идентификатор, указывающий на счет провайдера */
 typedef i64 ReferenceID
 
 struct BalanceRequest {
