@@ -20,7 +20,7 @@ typedef i64 AccountID
 
 struct BalanceRequest {
  1: required StringMap options
- 2: optional Timestamp requestTime
+ 2: optional Timestamp request_time
 }
 
 /** Баланс счета */
@@ -29,15 +29,15 @@ struct Balance {
     2: required string currency_code
 }
 
-/** Счет провайдера */
-struct Account {
-  1: required AccountID id
+/** Данные, определяющие счет провайдера */
+struct AccountReference {
+  1: required ReferenceID id
 }
 
 struct BalanceResponse {
  1: required Balance balance
- 2: required Account account
- 3: optional Timestamp responseTime
+ 2: required AccountReference account_reference
+ 3: optional Timestamp response_time
 }
 
 /**
