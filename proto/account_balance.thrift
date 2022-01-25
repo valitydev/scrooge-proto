@@ -48,6 +48,6 @@ service AccountService {
     /**
      * Запрос на получение баланса счета провайдера.
      */
-    BalanceResponse GetBalance (1: BalanceRequest)
+    BalanceResponse GetBalance (1: BalanceRequest balance_request)
 
 }
