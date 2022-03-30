@@ -16,7 +16,7 @@ typedef string Timestamp
 typedef i64 Amount
 
 /** Идентификатор, указывающий на счет провайдера */
-typedef i64 ReferenceID
+typedef string ReferenceID
 
 struct BalanceRequest {
  1: required StringMap options
