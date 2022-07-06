@@ -10,11 +10,11 @@
         <version>1.0.2</version>
     </parent>
 
-    <artifactId>account-balance-proto</artifactId>
+    <artifactId>scrooge-proto</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 
-    <name>Account balance</name>
+    <name>scrooge-proto</name>
     <description>Generates jar artifact containing compiled thrift classes based on generated thrift IDL files</description>
 
     <properties>

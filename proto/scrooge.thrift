@@ -1,6 +1,6 @@
 
-namespace java dev.vality.account_balance
-namespace erlang account_balance
+namespace java dev.vality.scrooge
+namespace erlang scrooge
 
 typedef map<string, string> StringMap
 
