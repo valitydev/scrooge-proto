@@ -1,1 +1,1 @@
-# account-balance-proto
+# scrooge-proto
