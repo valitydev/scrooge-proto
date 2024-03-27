@@ -28,7 +28,7 @@ struct TerminalBalance {
 
 /** Ответ сервиса */
 struct TerminalBalanceResponse {
-    1: required list<TerminalBalance> terminals
+    1: required list<TerminalBalance> balances
 }
 
 /**
@@ -40,6 +40,6 @@ service TerminalService {
     /**
      * Запрос на получение баланса терминала.
      */
-    TerminalBalanceResponse GetTerminalBalance()
+    TerminalBalanceResponse GetTerminalBalances()
 
 }
