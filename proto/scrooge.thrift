@@ -2,18 +2,12 @@
 namespace java dev.vality.scrooge
 namespace erlang scrooge
 
+include "base.thrift"
+
+typedef base.Timestamp Timestamp
+typedef base.Balance Balance
+
 typedef map<string, string> StringMap
-
-/**
- * Отметка во времени согласно RFC 3339.
- *
- * Строка должна содержать дату и время в UTC в следующем формате:
- * `2016-03-22T06:12:27Z`.
- */
-typedef string Timestamp
-
-/** Сумма в минимальных денежных единицах. */
-typedef i64 Amount
 
 /** Идентификатор, указывающий на счет провайдера */
 typedef string ReferenceID
@@ -23,11 +17,6 @@ struct BalanceRequest {
  2: optional Timestamp request_time
 }
 
-/** Баланс счета */
-struct Balance {
-    1: required Amount amount
-    2: required string currency_code
-}
 
 /** Данные, определяющие счет провайдера */
 struct AccountReference {
@@ -41,7 +30,8 @@ struct BalanceResponse {
 }
 
 /**
-* Интерфейс для работы со счетами провайдеров
+* Интерфейс для работы со счетами провайдеров. Используется в scrooge в качестве клиента для запроса информации по
+* счетам у адаптеров.
 */
 service AccountService {
 
