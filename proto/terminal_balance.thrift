@@ -25,13 +25,18 @@ struct Provider {
     2: required string name;
 }
 
-/** Ответ сервиса */
-struct TerminalBalanceResponse {
+struct TerminalBalance {
     1: required string account_id
     2: required Provider provider
     3: required Terminal terminal
     4: required Balance balance
     5: required Timestamp last_updated;
+}
+
+/** Ответ сервиса */
+struct TerminalBalanceResponse {
+    1: required list<TerminalBalance> terminals
+    2: optional string continuation_token
 }
 
 /**
