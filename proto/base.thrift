@@ -21,5 +21,3 @@ struct Balance {
     1: required Amount amount
     2: required string currency_code
 }
-
-typedef string ContinuationToken

@@ -7,13 +7,6 @@ include "base.thrift"
 typedef base.ID ID
 typedef base.Timestamp Timestamp
 typedef base.Balance Balance
-typedef base.ContinuationToken ContinuationToken
-
-/** Запрос к сервису */
-struct TerminalBalanceRequest {
-    1: optional i32 limit
-    2: optional ContinuationToken continuation_token
-}
 
 struct Terminal {
     1: required ID id
@@ -36,7 +29,6 @@ struct TerminalBalance {
 /** Ответ сервиса */
 struct TerminalBalanceResponse {
     1: required list<TerminalBalance> terminals
-    2: optional string continuation_token
 }
 
 /**
@@ -48,6 +40,6 @@ service TerminalService {
     /**
      * Запрос на получение баланса терминала.
      */
-    TerminalBalanceResponse GetTerminalBalance(1: TerminalBalanceRequest balance_request)
+    TerminalBalanceResponse GetTerminalBalance()
 
 }
