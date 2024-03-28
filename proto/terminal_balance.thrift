@@ -6,7 +6,15 @@ include "base.thrift"
 
 typedef base.ID ID
 typedef base.Timestamp Timestamp
-typedef base.Balance Balance
+
+/** Сумма в минимальных денежных единицах. */
+typedef string Amount
+
+/** Баланс счета */
+struct Balance {
+    1: required Amount amount
+    2: required string currency_code
+}
 
 struct Terminal {
     1: required ID id

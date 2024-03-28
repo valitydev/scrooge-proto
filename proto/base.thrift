@@ -12,12 +12,3 @@ typedef string Timestamp
 
 /** Идентификатор объекта */
 typedef string ID
-
-/** Сумма в минимальных денежных единицах. */
-typedef i64 Amount
-
-/** Баланс счета */
-struct Balance {
-    1: required Amount amount
-    2: required string currency_code
-}
