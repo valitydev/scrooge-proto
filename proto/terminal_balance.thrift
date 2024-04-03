@@ -30,8 +30,8 @@ struct TerminalBalance {
     1: required string account_id
     2: required Provider provider
     3: required Terminal terminal
-    4: required Balance balance
-    5: required Timestamp last_updated;
+    4: optional Balance balance
+    5: optional Timestamp last_updated;
 }
 
 /** Ответ сервиса */
