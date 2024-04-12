@@ -8,7 +8,7 @@ typedef base.ID ID
 typedef base.Timestamp Timestamp
 
 /** Сумма в минимальных денежных единицах. */
-typedef string Amount
+typedef i64 Amount
 
 /** Баланс счета */
 struct Balance {
@@ -26,7 +26,7 @@ struct Provider {
     2: required string name;
 }
 
-struct TerminalBalance {
+struct AccountBalance {
     1: required string account_id
     2: required Provider provider
     3: required Terminal terminal
@@ -35,19 +35,19 @@ struct TerminalBalance {
 }
 
 /** Ответ сервиса */
-struct TerminalBalanceResponse {
-    1: required list<TerminalBalance> balances
+struct AccountBalanceResponse {
+    1: required list<AccountBalance> balances
 }
 
 /**
-* Интерфейс для работы со счетами провайдеров. Используется в scrooge в качестве сервера для предоставления информации
-* о терминалах.
+* Интерфейс для работы со счетами. Используется в scrooge в качестве сервера для предоставления информации
+* о счетах и терминалах.
 */
-service TerminalService {
+service AccountService {
 
     /**
      * Запрос на получение баланса терминала.
      */
-    TerminalBalanceResponse GetTerminalBalances()
+    AccountBalanceResponse GetAccountBalances()
 
 }
