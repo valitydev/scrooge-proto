@@ -1,6 +1,6 @@
 
-namespace java dev.vality.scrooge.terminal.balance
-namespace erlang scrooge.terminal.balance
+namespace java dev.vality.scrooge.account
+namespace erlang scrooge.account
 
 include "base.thrift"
 

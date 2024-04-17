@@ -2,7 +2,7 @@
   "name": "@vality/scrooge-proto",
   "version": "0.1.0",
   "scripts": {
-    "codegen": "thrift-codegen --i ./proto --n scrooge terminal_balance"
+    "codegen": "thrift-codegen --i ./proto --n scrooge account_balance"
   },
   "publishConfig": {
     "access": "public",
